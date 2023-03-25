@@ -1,23 +1,22 @@
 import './MainContent.css';
-import React, { useEffect } from 'react';
-import { async } from 'q';
+import {MainCandidates} from './MainCandidates'
+
 
 export const MainContent = () => {
 
-  
-    return(
-        <div className='container'>
-            <main>
-                <div className="row">
-                    <div className="col s6"><h5>Candidates</h5></div>
-                    <div className="col s6"><input className='search-input' type="text" placeholder="Search..." /></div>
-                </div>
 
-                <div>
-
+    return (<div className='container'>
+        <main>
+            <div className="row">
+                <div className="col s6">
+                    <h5>Candidates</h5>
                 </div>
-            </main>
-        </div>
-        
-    );
+                <div className="col s6"><input className='search-input' type="text" placeholder="Search..."/></div>
+            </div>
+
+            <div>
+                <MainCandidates/>
+            </div>
+        </main>
+    </div>);
 }

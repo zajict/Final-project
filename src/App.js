@@ -1,13 +1,16 @@
 import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import ErrorPage from './pages/ErrorPage';
-import MainPage from './pages/MainPage';
-import SingleCandidatePage from './pages/SingleCandidatePage';
+import {Header} from './components/Header';
+import {MainContent} from './components/MainContent';
+import {Footer} from './components/Footer';
+
 function App() {
-return (
-  
-)
+    return (<div className="App">
+        <Header/>
+        <MainContent/>
+        <Footer/>
+    </div>);
 }
+
 export default App;
+
