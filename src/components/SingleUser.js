@@ -8,6 +8,7 @@ export const SingleUser = () => {
     const [reports, setReports] = useState([]);
     const navigate = useNavigate();
 
+
     useEffect(() => {
         fetch(`http://localhost:3333/api/candidates/?id=${id}`)
         .then(response => response.json())
