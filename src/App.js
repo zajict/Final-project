@@ -10,7 +10,7 @@ function App() {
         
         <Routes>
           < Route path='/' element={<MainPage/>} />
-          <Route path='/singleuser:id' element={<SingleCandidatePage />}/>
+          <Route path='/singleuser/:id' element={<SingleCandidatePage />}/>
           <Route path='*' element={<ErrorPage />}/>
         </Routes>
     </BrowserRouter>);
