@@ -1,6 +1,6 @@
 import './SingleUser.css';
 import { useEffect, useState } from 'react';
-import { FaEye } from 'react-icons/fa';
+import { FaEye, FaSortDown } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
 
 export const SingleUser = () => {
@@ -68,9 +68,9 @@ export const SingleUser = () => {
                 <table className="responsive-table striped highlight">
                     <thead>
                         <tr>
-                            <th>Company</th>
-                            <th>Interview date</th>
-                            <th>status</th>
+                            <th><FaSortDown /> Company</th>
+                            <th><FaSortDown /> Interview date</th>
+                            <th><FaSortDown /> Status</th>
                         </tr>
                     </thead>
 
