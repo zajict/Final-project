@@ -1,7 +1,9 @@
 import React from 'react';
 import {Header} from '../components/Header';
+import {SingleUser} from '../components/SingleUser';
+import {Footer} from '../components/Footer';
 
-const SingleCandidatepage = () => {
+const SingleCandidatePage = () => {
     return (<>
         <Header/>
         <SingleUser/>
@@ -9,4 +11,4 @@ const SingleCandidatepage = () => {
     </>)
 }
 
-export default SingleCandidatepage;
+export default SingleCandidatePage;
