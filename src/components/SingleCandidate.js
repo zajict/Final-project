@@ -4,17 +4,15 @@ import { FaEye, FaSortDown } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 
 export const SingleCandidate = () => {
-    const [candidate, setCandidate] = useState([]);
+    const [candidate, setCandidate] = useState({});
     const [reports, setReports] = useState([]);
     const { id } = useParams();
 
-
     useEffect(() => {
-        fetch(`http://localhost:3333/api/candidates/?candidateId=${id}`)
+        fetch(`http://localhost:3333/api/candidates/?id=${id}`)
         .then(response => response.json())
-        .then(data => setCandidate(data))
-        if (!candidate) return null;
-    }, [candidate, id]);
+        .then(data => {console.log(data); setCandidate(data)})
+    }, [id]);
 
     const dob = candidate.birthday;
     const dobDate = new Date(dob);
@@ -23,11 +21,12 @@ export const SingleCandidate = () => {
     const dobYear = dobDate.getFullYear();
     const formattedDob = `${dobDay}.${dobMonth}.${dobYear}`;
 
+
     useEffect(() => {
         fetch(`http://localhost:3333/api/reports?candidateId=${id}`)
         .then(response => response.json())
         .then(data => setReports(data))
-    }, [id]);
+    }, [id])
 
     const doi = reports.interviewDate;
     const doiDate = new Date(doi);
@@ -38,31 +37,33 @@ export const SingleCandidate = () => {
 
     return (
         <>
-            <div className="row">
-                <div className="col s3">{candidate.avatar}</div>
-                <div className="col s9">
-                    <div className="row">
-                        <div className="name-container">
-                            <p>Name:</p>
-                            <div>{candidate.name}</div>
+            {candidate &&
+                <div className="row">
+                    <div className="col s3">{candidate.avatar}</div>
+                    <div className="col s9">
+                        <div className="row">
+                            <div className="name-container">
+                                <p>Name:</p>
+                                <div>{candidate.name}</div>
+                            </div>
+                            <div className="dob-container">
+                                <p>Date of birth:</p>
+                                <div>{formattedDob}</div>
+                            </div>
                         </div>
-                        <div className="dob-container">
-                            <p>Date of birth:</p>
-                            <div>{formattedDob}</div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="email-container">
-                            <p>Email:</p>
-                            <div>{candidate.email}</div>
-                        </div>
-                        <div className="edu-container">
-                            <p>Education:</p>
-                            <div>{candidate.education}</div>
+                        <div className="row">
+                            <div className="email-container">
+                                <p>Email:</p>
+                                <div>{candidate.email}</div>
+                            </div>
+                            <div className="edu-container">
+                                <p>Education:</p>
+                                <div>{candidate.education}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
 
             <div className="row">
                 <table className="responsive-table striped highlight">
@@ -77,7 +78,7 @@ export const SingleCandidate = () => {
                     <tbody>
                         {reports.map(report => (
                             <>
-                                <tr>
+                                <tr key={report.id}>
                                     <td>{report.companyName}</td>
                                 </tr>
                                 <tr>
