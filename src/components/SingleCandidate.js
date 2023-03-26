@@ -1,23 +1,22 @@
-import './SingleUser.css';
+import './SingleCandidate.css';
 import { useEffect, useState } from 'react';
 import { FaEye, FaSortDown } from 'react-icons/fa';
-import { useNavigate } from 'react-router';
+import { useParams } from 'react-router-dom';
 
-export const SingleUser = () => {
-    const [user, setUser] = useState([]);
+export const SingleCandidate = () => {
+    const [candidate, setCandidate] = useState([]);
     const [reports, setReports] = useState([]);
-    const navigate = useNavigate();
+    const { id } = useParams();
 
 
     useEffect(() => {
-        fetch(`http://localhost:3333/api/candidates/?id=${id}`)
+        fetch(`http://localhost:3333/api/candidates/?candidateId=${id}`)
         .then(response => response.json())
-        .then(data => setUser(data))
-    }, [id]);
+        .then(data => setCandidate(data))
+        if (!candidate) return null;
+    }, [candidate, id]);
 
-    if (!user) return null;
-
-    const dob = user.birthday;
+    const dob = candidate.birthday;
     const dobDate = new Date(dob);
     const dobDay = dobDate.getDate().toString().padStart(2, '0');
     const dobMonth = (dobDate.getMonth() + 1).toString().padStart(2, '0');
@@ -25,7 +24,7 @@ export const SingleUser = () => {
     const formattedDob = `${dobDay}.${dobMonth}.${dobYear}`;
 
     useEffect(() => {
-        fetch(`http://localhost:3333/api/reports?candidateId=${candidateId}`)
+        fetch(`http://localhost:3333/api/reports?candidateId=${id}`)
         .then(response => response.json())
         .then(data => setReports(data))
     }, [id]);
@@ -40,12 +39,12 @@ export const SingleUser = () => {
     return (
         <>
             <div className="row">
-                <div className="col s3">{user.avatar}</div>
+                <div className="col s3">{candidate.avatar}</div>
                 <div className="col s9">
                     <div className="row">
                         <div className="name-container">
                             <p>Name:</p>
-                            <div>{user.name}</div>
+                            <div>{candidate.name}</div>
                         </div>
                         <div className="dob-container">
                             <p>Date of birth:</p>
@@ -55,11 +54,11 @@ export const SingleUser = () => {
                     <div className="row">
                         <div className="email-container">
                             <p>Email:</p>
-                            <div>{user.email}</div>
+                            <div>{candidate.email}</div>
                         </div>
                         <div className="edu-container">
                             <p>Education:</p>
-                            <div>{user.education}</div>
+                            <div>{candidate.education}</div>
                         </div>
                     </div>
                 </div>
@@ -86,7 +85,7 @@ export const SingleUser = () => {
                                 </tr>
                                 <tr>
                                     <td>{report.status}</td>
-                                    <td><FaEye onClick={() => modalHandler(report.candidateId)} /></td>
+                                    <td><FaEye /></td>
                                 </tr>
                             </>
                         ))}
@@ -96,3 +95,5 @@ export const SingleUser = () => {
         </>
     );
 }
+
+//to be added to <FaEye /> element: onClick={() => modalHandler(report.id)}

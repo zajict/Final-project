@@ -1,12 +1,11 @@
 import './Card.css'
-import React from 'react';
-import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const Card = ({avatar, email, name, id}) => {
-    return (<Link to={
-        `singlecandidate/${id}`
-    }>
-        <div className='card'>
+    const navigate = useNavigate();
+
+    return (
+        <div className='card' onClick={() => navigate(`/candidate/${id}`)}>
             <div className='card-image'>
                 <img src= {
                         "https://static.thenounproject.com/png/363640-200.png"
@@ -15,6 +14,6 @@ const Card = ({avatar, email, name, id}) => {
             <div className='card-name'> {name}</div>
             <div className='card-email'> {email}</div>
         </div>
-    </Link>)
+    );
 };
 export default Card;
