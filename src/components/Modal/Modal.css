@@ -1,0 +1,47 @@
+.modalBackground {
+  position: fixed;
+  left: 20%;
+  top: 20%;
+}
+.modalContainer {
+  width: 60vw;
+  height: 60vh;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.modalContainer .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+div.row.title::after {
+  content: none !important;
+}
+
+#button {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #484848;
+}
+.gray-info {
+  color: gray;
+  font-size: 20px;
+}
+.gray-data {
+  color: #484848;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.notes .gray-info {
+  font-size: 30px;
+}
+p.text {
+  font-size: 25px;
+}
