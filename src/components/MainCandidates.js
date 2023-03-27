@@ -8,7 +8,7 @@ export const MainCandidates = () => {
     const [candidates, setCandidates] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
-            fetch('http://localhost:3333/api/candidates').then((response) => response.json()).then(data=>{setCandidates(data); console.log(data); } ); 
+            fetch('http://localhost:3333/api/candidates').then((response) => response.json()).then(data=>{setCandidates(data);} ); 
         };
         fetchData();
 

@@ -2,19 +2,24 @@ import './SingleCandidate.css';
 import { useEffect, useState } from 'react';
 import { FaEye, FaSortDown } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
+import Modal from './Modal/Modal';
+
 
 export const SingleCandidate = () => {
     const [candidate, setCandidate] = useState([]);
     const [reports, setReports] = useState([]);
     const { id } = useParams();
+    const [openModal, setOpenModal] = useState(false);
 
 
     useEffect(() => {
         fetch(`http://localhost:3333/api/candidates/?candidateId=${id}`)
         .then(response => response.json())
-        .then(data => setCandidate(data))
+        .then(data => { 
+            console.log(data[0]);
+            setCandidate(data[0])})
         if (!candidate) return null;
-    }, [candidate, id]);
+    }, [id]);
 
     const dob = candidate.birthday;
     const dobDate = new Date(dob);
@@ -26,7 +31,8 @@ export const SingleCandidate = () => {
     useEffect(() => {
         fetch(`http://localhost:3333/api/reports?candidateId=${id}`)
         .then(response => response.json())
-        .then(data => setReports(data))
+        .then(data => {setReports(data)
+        console.log(data);})
     }, [id]);
 
     const doi = reports.interviewDate;
@@ -37,9 +43,10 @@ export const SingleCandidate = () => {
     const formattedDoi = `${doiDay}.${doiMonth}.${doiYear}`;
 
     return (
-        <>
-            <div className="row">
-                <div className="col s3">{candidate.avatar}</div>
+        <>  
+        <div className={`${openModal ? "modalUp" : "modalDown"}`}>
+        <div className="row">
+                <div className="col s3" ><img src={candidate.avatar} style={{width :"80%"}}/></div>
                 <div className="col s9">
                     <div className="row">
                         <div className="name-container">
@@ -65,7 +72,7 @@ export const SingleCandidate = () => {
             </div>
 
             <div className="row">
-                <table className="responsive-table striped highlight">
+                <table className="responsive-table">
                     <thead>
                         <tr>
                             <th><FaSortDown /> Company</th>
@@ -85,13 +92,18 @@ export const SingleCandidate = () => {
                                 </tr>
                                 <tr>
                                     <td>{report.status}</td>
-                                    <td><FaEye /></td>
+                                    <td><FaEye className='openModalBtn' onClick={()=> {
+                                        setOpenModal(true);
+                                        }}/></td>
+                                    {openModal && <Modal candidate={candidate} report={report} setOpenModal={setOpenModal}/>}
                                 </tr>
                             </>
                         ))}
                     </tbody>
                 </table>
             </div>
+        </div>
+        
         </>
     );
 }
