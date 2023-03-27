@@ -1,6 +1,6 @@
 import './SingleCandidate.css';
 import { useEffect, useState } from 'react';
-import { FaEye, FaSortDown } from 'react-icons/fa';
+import { FaRegEye, FaSortDown } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 
@@ -45,26 +45,30 @@ export const SingleCandidate = () => {
             {candidate &&
                 <div className={`${openModal ? "modalUp" : "modalDown"}`}>
                     <div className="row">
-                        <div className="col s3" ><img src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
-                        <div className="col s9">
-                            <div className="row">
-                                <div className="name-container">
-                                    <p>Name:</p>
-                                    <div>{candidate.name}</div>
-                                </div>
-                                <div className="dob-container">
-                                    <p>Date of birth:</p>
-                                    <div>{formattedDob}</div>
+                        <div className="info-container">
+                            <div className="col s4 image-container"><img className="candidate-image" src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
+                            <div className="col s4 specs-container">
+                                <div className="row">
+                                    <div className="name-container">
+                                        <p className="subtitle">Name:</p>
+                                        <div className="info">{candidate.name}</div>
+                                    </div>
+                                    <div className="email-container">
+                                        <p className="subtitle">Email:</p>
+                                        <div className="info">{candidate.email}</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="email-container">
-                                    <p>Email:</p>
-                                    <div>{candidate.email}</div>
-                                </div>
-                                <div className="edu-container">
-                                    <p>Education:</p>
-                                    <div>{candidate.education}</div>
+                            <div className="col s4">
+                                <div className="row">
+                                    <div className="dob-container">
+                                        <p className="subtitle">Date of birth:</p>
+                                        <div className="info">{formattedDob}</div>
+                                    </div>
+                                    <div className="edu-container">
+                                        <p className="subtitle">Education:</p>
+                                        <div className="info">{candidate.education}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -73,29 +77,27 @@ export const SingleCandidate = () => {
             }
 
             <div className="row">
-                <table className="responsive-table">
+                <table className="container responsive-table highlight striped table-container">
                     <thead>
-                        <tr>
-                            <th><FaSortDown /> Company</th>
-                            <th><FaSortDown /> Interview date</th>
-                            <th><FaSortDown /> Status</th>
+                        <tr className="table-border">
+                            <th className="table-heading"><FaSortDown /> Company</th>
+                            <th className="table-heading"><FaSortDown /> Interview date</th>
+                            <th className="table-heading"><FaSortDown /> Status</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         {reports.map(report => (
                             <>
-                                <tr key={report.id}>
+                                <tr className="table-border" key={report.id}>
                                     <td>{report.companyName}</td>
-                                </tr>
-                                <tr>
                                     {<td>{formatInterviewDate(report.interviewDate)}</td>}
-                                </tr>
-                                <tr>
-                                    <td>{report.status}</td>
-                                    <td><FaEye className="openModalBtn" onClick={()=> {
-                                        setOpenModal(true);
-                                        }}/>
+                                    <td>
+                                        <td>{report.status}</td>
+                                        <td><FaRegEye className="openModalBtn eye-icon" onClick={()=> {
+                                            setOpenModal(true);
+                                            }}/>
+                                        </td>
                                     </td>
                                     {openModal && <Modal candidate={candidate} report={report} setOpenModal={setOpenModal}/>}
                                 </tr>

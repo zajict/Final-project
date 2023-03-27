@@ -1,3 +1,45 @@
+.info-container {
+  margin-top: 3%;
+  width: 95%;
+}
+
 .modalUp {
     background: rgba(0, 0, 0, 0.8);
-  }
+}
+
+.openModalBtn:hover {
+  cursor: pointer;
+}
+
+.table-container {
+  width: 95%;
+}
+
+.table-border {
+  border: 1px solid 95A5A6;
+}
+
+.table-heading {
+  background-color: #22A7F0;
+  color: white;
+}
+
+.candidate-image {
+  padding: 5%;
+  height: auto;
+  width: 60%;
+}
+
+.subtitle {
+  color: #95A5A6;
+}
+
+.info {
+  font-size: 1.3rem;
+}
+
+.eye-icon {
+  width: 100%;
+  height: auto;
+  padding-left: 10%;
+}
