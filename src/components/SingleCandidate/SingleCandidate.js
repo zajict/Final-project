@@ -31,12 +31,14 @@ export const SingleCandidate = () => {
         .then(data => setReports(data))
     }, [id])
 
-    const doi = reports.interviewDate;
-    const doiDate = new Date(doi);
-    const doiDay = doiDate.getDate().toString().padStart(2, '0');
-    const doiMonth = (doiDate.getMonth() + 1).toString().padStart(2, '0');
-    const doiYear = doiDate.getFullYear();
-    const formattedDoi = `${doiDay}.${doiMonth}.${doiYear}`;
+    const formatInterviewDate = (interviewDate) => {
+        if (!interviewDate) return '';
+        const doiDate = new Date(interviewDate);
+        const doiDay = doiDate.getDate().toString().padStart(2, '0');
+        const doiMonth = (doiDate.getMonth() + 1).toString().padStart(2, '0');
+        const doiYear = doiDate.getFullYear();
+        return (`${doiDay}.${doiMonth}.${doiYear}`);
+    };      
 
     return (
         <>  
@@ -87,13 +89,14 @@ export const SingleCandidate = () => {
                                     <td>{report.companyName}</td>
                                 </tr>
                                 <tr>
-                                    <td>{formattedDoi}</td>
+                                    {<td>{formatInterviewDate(report.interviewDate)}</td>}
                                 </tr>
                                 <tr>
                                     <td>{report.status}</td>
-                                    <td><FaEye className='openModalBtn' onClick={()=> {
+                                    <td><FaEye className="openModalBtn" onClick={()=> {
                                         setOpenModal(true);
-                                        }}/></td>
+                                        }}/>
+                                    </td>
                                     {openModal && <Modal candidate={candidate} report={report} setOpenModal={setOpenModal}/>}
                                 </tr>
                             </>
