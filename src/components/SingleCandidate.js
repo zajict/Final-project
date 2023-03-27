@@ -2,23 +2,19 @@ import './SingleCandidate.css';
 import { useEffect, useState } from 'react';
 import { FaEye, FaSortDown } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
-import Modal from './Modal/Modal';
+import Modal from '../Modal/Modal';
 
 
 export const SingleCandidate = () => {
-    const [candidate, setCandidate] = useState([]);
+    const [candidate, setCandidate] = useState({});
     const [reports, setReports] = useState([]);
     const { id } = useParams();
     const [openModal, setOpenModal] = useState(false);
 
-
     useEffect(() => {
-        fetch(`http://localhost:3333/api/candidates/?candidateId=${id}`)
+        fetch(`http://localhost:3333/api/candidates/?id=${id}`)
         .then(response => response.json())
-        .then(data => { 
-            console.log(data[0]);
-            setCandidate(data[0])})
-        if (!candidate) return null;
+        .then(data => setCandidate(data[0]))
     }, [id]);
 
     const dob = candidate.birthday;
@@ -28,12 +24,12 @@ export const SingleCandidate = () => {
     const dobYear = dobDate.getFullYear();
     const formattedDob = `${dobDay}.${dobMonth}.${dobYear}`;
 
+
     useEffect(() => {
         fetch(`http://localhost:3333/api/reports?candidateId=${id}`)
         .then(response => response.json())
-        .then(data => {setReports(data)
-        console.log(data);})
-    }, [id]);
+        .then(data => setReports(data))
+    }, [id])
 
     const doi = reports.interviewDate;
     const doiDate = new Date(doi);
@@ -44,32 +40,35 @@ export const SingleCandidate = () => {
 
     return (
         <>  
-        <div className={`${openModal ? "modalUp" : "modalDown"}`}>
-        <div className="row">
-                <div className="col s3" ><img src={candidate.avatar} style={{width :"80%"}}/></div>
-                <div className="col s9">
+            {candidate &&
+                <div className={`${openModal ? "modalUp" : "modalDown"}`}>
                     <div className="row">
-                        <div className="name-container">
-                            <p>Name:</p>
-                            <div>{candidate.name}</div>
-                        </div>
-                        <div className="dob-container">
-                            <p>Date of birth:</p>
-                            <div>{formattedDob}</div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="email-container">
-                            <p>Email:</p>
-                            <div>{candidate.email}</div>
-                        </div>
-                        <div className="edu-container">
-                            <p>Education:</p>
-                            <div>{candidate.education}</div>
+                        <div className="col s3" ><img src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
+                        <div className="col s9">
+                            <div className="row">
+                                <div className="name-container">
+                                    <p>Name:</p>
+                                    <div>{candidate.name}</div>
+                                </div>
+                                <div className="dob-container">
+                                    <p>Date of birth:</p>
+                                    <div>{formattedDob}</div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="email-container">
+                                    <p>Email:</p>
+                                    <div>{candidate.email}</div>
+                                </div>
+                                <div className="edu-container">
+                                    <p>Education:</p>
+                                    <div>{candidate.education}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
 
             <div className="row">
                 <table className="responsive-table">
@@ -84,7 +83,7 @@ export const SingleCandidate = () => {
                     <tbody>
                         {reports.map(report => (
                             <>
-                                <tr>
+                                <tr key={report.id}>
                                     <td>{report.companyName}</td>
                                 </tr>
                                 <tr>
@@ -102,10 +101,6 @@ export const SingleCandidate = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
-        
         </>
     );
 }
-
-//to be added to <FaEye /> element: onClick={() => modalHandler(report.id)}
