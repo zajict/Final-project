@@ -1,0 +1,11 @@
+.icon {
+  color: #2196f3;
+}
+.changedWidth {
+  width: 60%;
+  height: 50%;
+  padding: 10px;
+}
+#searchWrapper {
+  height: 100vh;
+}
