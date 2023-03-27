@@ -5,7 +5,7 @@ import { Header } from './components/Header';
 import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
 import { Route, Routes } from 'react-router';
-import { SingleCandidate } from './components/SingleCandidate';
+import { SingleCandidate } from './components/SingleCandidate/SingleCandidate';
 
 function App() {
   return (
