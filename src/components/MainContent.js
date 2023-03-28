@@ -9,8 +9,6 @@ export const MainContent = () => {
     
     const [searchQuery,setSearchQuery] = useState("");
 
-    const filteredCandidates = candidates.filter((candidates)=> candidates.name.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
-
         const [candidates, setCandidates] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -20,6 +18,8 @@ export const MainContent = () => {
 
     }, []);
 
+    const filteredCandidates = candidates.filter((candidates)=> candidates.name.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
+    
     return (<div className='container'>
         <main>
             <div className="row">
