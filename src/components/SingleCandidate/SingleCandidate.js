@@ -41,9 +41,9 @@ export const SingleCandidate = () => {
     };      
 
     return (
-        <>  
+        <div className={`${openModal ? "modalUp" : "modalDown"}`}>  
             {candidate &&
-                <div className={`${openModal ? "modalUp" : "modalDown"}`}>
+                <div>
                     <div className="row">
                         <div className="info-container">
                             <div className="col s4 image-container"><img className="candidate-image" src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
@@ -106,6 +106,6 @@ export const SingleCandidate = () => {
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     );
 }
