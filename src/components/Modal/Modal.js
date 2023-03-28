@@ -8,7 +8,6 @@ const Modal = ({candidate, report, setOpenModal}) => {
     const doiMonth = (doiDate.getMonth() + 1).toString().padStart(2, '0');
     const doiYear = doiDate.getFullYear();
     const formattedDoi = `${doiDay}.${doiMonth}.${doiYear}`;
-    console.log(report);
 
     return (
         <div className="modalBackground">
@@ -24,25 +23,35 @@ const Modal = ({candidate, report, setOpenModal}) => {
                 </div>
                 <div className="row">
                 <div className="body">
-                    <div className="info col s4">
-                        <h6 className="gray-info">Company</h6>
+                    <div className="info col l4 s12">
+                        <div className="col l12 m6 s12">
+                        <h6 className="gray-info ">Company</h6>
                         <h6 className="gray-data">{report.companyName}</h6>
+                        </div>
+                        <div className="col l12 m6 s12">
                         <h6 className="gray-info">Interview Date</h6>
                         <h6 className="gray-data">{formattedDoi}</h6>
+                        </div>
+                        <div className="col l12 m6 s12">
                         <h6 className="gray-info">Phase</h6>
                         <h6 className="gray-data"> {report.phase}</h6>
+                        </div>
+                        <div className="col l12 m6 s12">
                         <h6 className="gray-info">Status</h6>
                         <h6 className="gray-data"> {report.status}</h6>
-                    </div>
-                    <div className="notes col s8">
+                            </div>
                         
+                    </div>
+                    <div className="notes col l8 s12">
                         <h6 className="gray-info">
                             Notes
                         </h6>
-                        
-                        <p className="text">
+                        <div className="text-container">
+                        <p className="text" id="text-paragraph">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan sodales turpis sed maximus. Aenean bibendum arcu in enim lacinia posuere. Aliquam sodales, massa ut luctus pulvinar, odio leo pretium nisl, vitae pharetra nisi urna nec tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras tristique pellentesque est, in hendrerit dolor finibus a. Sed consequat pulvinar lectus ut feugiat. Curabitur vel erat vel dui convallis volutpat.
                         </p>
+                        </div>
+                        
                         
                     </div>
                 </div>
