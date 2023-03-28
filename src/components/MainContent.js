@@ -27,7 +27,8 @@ export const MainContent = () => {
 
     }, []);
 
-    return (<div className='container'>
+    return (
+    <div className='container'>
         <main>
             <div className="row">
                 <div className="col s6">
@@ -35,7 +36,7 @@ export const MainContent = () => {
                 </div>
                 <div className="col s6"><Search searchQuery={searchQuery} setSearchQuery={setSearchQuery}/></div>
             </div>
-            <div>
+            <div className='col s6'>
                 {searchQuery ? (<SearchedCandidates candidates={filteredCandidates} setSearchQuery={setSearchQuery}/>) : (<Card candidates={candidates}/>) }
             </div>
         </main>
