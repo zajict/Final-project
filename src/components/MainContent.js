@@ -7,16 +7,9 @@ import Card from './Card';
 
 export const MainContent = () => {
     
-    const [fetchedCandidates, setFetchCandidates] = useState([]);
     const [searchQuery,setSearchQuery] = useState("");
 
-    useEffect(() => {
-        fetch('http://localhost:3333/api/candidates').then((response) => response.json()).then(data=>{setFetchCandidates(data);}
-        )
-    }, [])
-
-
-    const filteredCandidates = fetchedCandidates.filter((candidates)=> candidates.name.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
+    const filteredCandidates = candidates.filter((candidates)=> candidates.name.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
 
         const [candidates, setCandidates] = useState([]);
     useEffect(() => {

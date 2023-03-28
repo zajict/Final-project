@@ -1,11 +1,11 @@
 .modalBackground {
   position: absolute;
-  left: 20%;
+  left: 15%;
   top: 20%;
 }
 .modalContainer {
-  width: 60vw;
-  height: 60vh;
+  width: 70vw;
+  height: 70vh;
   border-radius: 12px;
   background-color: white;
   display: flex;
@@ -87,7 +87,7 @@ p.text {
   }
   .modalContainer {
     width: 80vw;
-    height: 50vh;
+    height: 60vh;
     border-radius: 12px;
     background-color: white;
     display: flex;
@@ -97,11 +97,11 @@ p.text {
   }
   .modalBackground {
     position: fixed;
-    left: 20%;
+    left: 10%;
     top: 20%;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   .title {
     font-size: 10px;
   }
