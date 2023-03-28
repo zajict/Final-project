@@ -4,7 +4,6 @@ import './Search.css'
 const Search = ({searchQuery, setSearchQuery}) => {
     return (
         <div className="container">
-        
       <div className="nav-wrapper">
       <form>
         <div className="input-field">
