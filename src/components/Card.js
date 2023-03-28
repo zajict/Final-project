@@ -6,7 +6,7 @@ const Card = ({candidates}) => {
 
     return (
         <div>
-        <div className='container candidates'>
+        <div className='container candidates' id='candidate'>
             {candidates.map(candidate => (
                 <div className='card' onClick={() => navigate(`/candidate/${candidate.id}`)}>
             <div className='card-image'>
