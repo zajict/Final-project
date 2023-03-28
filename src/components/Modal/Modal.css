@@ -1,11 +1,11 @@
 .modalBackground {
-  position: fixed;
-  left: 20%;
+  position: absolute;
+  left: 15%;
   top: 20%;
 }
 .modalContainer {
-  width: 60vw;
-  height: 60vh;
+  width: 70vw;
+  height: 70vh;
   border-radius: 12px;
   background-color: white;
   display: flex;
@@ -22,6 +22,9 @@
 div.row.title::after {
   content: none !important;
 }
+.text-container {
+  white-space: normal;
+}
 
 #button {
   background-color: transparent;
@@ -37,11 +40,103 @@ div.row.title::after {
 .gray-data {
   color: #484848;
   font-size: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .notes .gray-info {
   font-size: 30px;
 }
 p.text {
-  font-size: 25px;
+  font-size: 20px;
+}
+@media screen and (max-width: 1440px) {
+  .gray-info {
+    color: gray;
+    font-size: 20px;
+  }
+  .gray-data {
+    color: #484848;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .notes .gray-info {
+    font-size: 30px;
+  }
+  p.text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .gray-info {
+    color: gray;
+    font-size: 20px;
+  }
+  .gray-data {
+    color: #484848;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .notes .gray-info {
+    font-size: 30px;
+  }
+  p.text {
+    font-size: 16px;
+  }
+
+  .text-container {
+    white-space: normal;
+  }
+  .modalContainer {
+    width: 80vw;
+    height: 60vh;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px px;
+    overflow: auto;
+  }
+  .modalBackground {
+    position: fixed;
+    left: 10%;
+    top: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 10px;
+  }
+  .gray-info {
+    color: gray;
+    font-size: 20px;
+  }
+  .gray-data {
+    color: #484848;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .notes .gray-info {
+    font-size: 30px;
+  }
+  p.text {
+    font-size: 16px;
+  }
+
+  .text-container {
+    white-space: normal;
+  }
+  .modalContainer {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px px;
+    overflow: auto;
+  }
+  .modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }
