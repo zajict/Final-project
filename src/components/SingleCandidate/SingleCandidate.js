@@ -44,10 +44,10 @@ export const SingleCandidate = () => {
         <>  
             {candidate &&
                 <div className={`${openModal ? "modalUp" : "modalDown"}`}>
-                    <div className="row">
-                        <div className="info-container">
-                            <div className="col s4 image-container"><img className="candidate-image" src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
-                            <div className="col s4 specs-container">
+                    <div className="container info-container">
+                        <div className="row">
+                            <div className="col s12 m6 l4 xl4 image-container"><img className="responsive-img candidate-image" src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
+                            <div className="col s12 m6 l4 xl4 specs-container">
                                 <div className="row">
                                     <div className="name-container">
                                         <p className="subtitle">Name:</p>
@@ -59,7 +59,7 @@ export const SingleCandidate = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col s4">
+                            <div className="col s12 m6 l4 xl4">
                                 <div className="row">
                                     <div className="dob-container">
                                         <p className="subtitle">Date of birth:</p>
@@ -77,6 +77,7 @@ export const SingleCandidate = () => {
             }
 
             <div className="row">
+                <p id="title">Reports</p>
                 <table className="container responsive-table highlight striped table-container">
                     <thead>
                         <tr className="table-border">
@@ -93,11 +94,15 @@ export const SingleCandidate = () => {
                                     <td>{report.companyName}</td>
                                     {<td>{formatInterviewDate(report.interviewDate)}</td>}
                                     <td>
-                                        <td>{report.status}</td>
-                                        <td><FaRegEye className="openModalBtn eye-icon" onClick={()=> {
-                                            setOpenModal(true);
-                                            }}/>
-                                        </td>
+                                        <table>
+                                            <tr>
+                                                <td>{report.status}</td>
+                                                <td><FaRegEye className="openModalBtn eye-icon" onClick={()=> {
+                                                    setOpenModal(true);
+                                                    }}/>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                     {openModal && <Modal candidate={candidate} report={report} setOpenModal={setOpenModal}/>}
                                 </tr>
