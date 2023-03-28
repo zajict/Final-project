@@ -11,7 +11,7 @@ const Card = ({candidates}) => {
                 <div className='card' onClick={() => navigate(`/candidate/${candidate.id}`)}>
             <div className='card-image'>
                 <img src= {
-                        "https://static.thenounproject.com/png/363640-200.png"
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5qM2m_aEWRcBU1u-tMav3P6RBYWDIJQMVHx9IIeixwFITKDDyR43ok9TJRtoP2BeyYtk&usqp=CAU"
                     } alt='candidate'/>
             </div>
             <div className='card-name'> {candidate.name}</div>
