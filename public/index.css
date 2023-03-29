@@ -1,4 +1,10 @@
 #root {
-    min-height: 170vh;
+    min-height: 200vh;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    #root {
+        min-height: 330vh;
+    }
 }
