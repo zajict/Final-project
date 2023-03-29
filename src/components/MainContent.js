@@ -28,7 +28,7 @@ export const MainContent = () => {
                 </div>
                 <div className="col s6"><Search searchQuery={searchQuery} setSearchQuery={setSearchQuery}/></div>
             </div>
-            <div>
+            <div id='candidate-box'>
                 {searchQuery ? (<SearchedCandidates candidates={filteredCandidates} setSearchQuery={setSearchQuery}/>) : (<Card candidates={candidates}/>) }
             </div>
         </main>
