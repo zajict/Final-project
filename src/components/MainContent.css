@@ -1,3 +1,10 @@
 .search-input {
     border-radius: 5px;
 }
+#candidate-box{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
