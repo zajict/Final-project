@@ -18,6 +18,7 @@
 }
 
 #candidate{
+    
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 80px;
