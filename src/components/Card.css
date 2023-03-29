@@ -11,12 +11,3 @@
    object-fit: contain;
 }
 
-.card:hover {
-    margin-top: -10px;
-    width: 120%;
-    transition: 300ms;
-}
-
-#candidate{
-    
-} 
