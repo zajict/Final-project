@@ -78,7 +78,7 @@ export const SingleCandidate = () => {
 
             <div className="row">
                 <p id="title">Reports</p>
-                <table className="container responsive-table highlight striped table-container">
+                <table className="container responsive-table highlight striped bordered table-container">
                     <thead>
                         <tr className="table-border">
                             <th className="table-heading"><FaSortDown /> Company</th>
@@ -92,7 +92,7 @@ export const SingleCandidate = () => {
                             <>
                                 <tr className="table-border" key={report.id}>
                                     <td>{report.companyName}</td>
-                                    {<td>{formatInterviewDate(report.interviewDate)}</td>}
+                                    {<td className="doi">{formatInterviewDate(report.interviewDate)}</td>}
                                     <td>
                                         <table>
                                             <tr>

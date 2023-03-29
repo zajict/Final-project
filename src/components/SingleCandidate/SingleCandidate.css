@@ -19,28 +19,6 @@
   padding-right: 15%;
 }
 
-.modalUp {
-  background: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-}
-
-.openModalBtn:hover {
-  cursor: pointer;
-}
-
-.table-container {
-  width: 100%;
-}
-
-.table-border {
-  border: 1px solid #95A5A6;
-}
-
-.table-heading {
-  background-color: #22a7f0;
-  color: white;
-}
-
 .subtitle {
   font-size: 1.1em;
   color: #95A5A6;
@@ -51,8 +29,29 @@
   text-indent: 1.5em;
 }
 
+.table-container {
+  width: 100%;
+  border: 1px solid #95A5A6;
+}
+
+.table-heading {
+  background-color: #22a7f0;
+  color: white;
+}
+
+.td {
+  padding: 10px 5px;
+}
+
 .eye-icon {
   width: 100%;
-  padding-right: 10%;
-  padding-left: 5%;
+}
+
+.modalUp {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+}
+
+.openModalBtn:hover {
+  cursor: pointer;
 }
