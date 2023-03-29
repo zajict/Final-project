@@ -20,8 +20,8 @@ export const MainContent = () => {
 
     const filteredCandidates = candidates.filter((candidates)=> candidates.name.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
     
-    return (<div className='container'>
-        <main>
+    return (<div className=''>
+        <main className=''>
             <div className="row">
                 <div className="col s6">
                     <h5>Candidates</h5>

@@ -7,7 +7,7 @@ export const Header = () => {
         
               <nav>
     <div className="nav-wrapper blue header">
-        <span className=''>Interviews Reports</span>
+        <span className='flow-text'>Interviews Reports</span>
         <button className='blue button' onClick={()=> navigate('/')}>Candidates</button> 
     </div>
   </nav>
