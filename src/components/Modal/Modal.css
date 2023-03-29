@@ -39,7 +39,7 @@ div.row.title::after {
 }
 .gray-data {
   color: #484848;
-  font-size: 2vw;
+  font-size: 1.8vw;
   padding-bottom: 10px;
 }
 .notes .gray-info {
