@@ -78,7 +78,7 @@ export const Reports = () => {
                                 </div>
                             
                                 <div className="col s2 m2 l3 xl3">
-                                    <div>{formatInterviewDate}</div>
+                                    <div>{formatInterviewDate(report.interviewDate)}</div>
                                     <div>Interview date</div>
                                 </div>
                                 <div className="col s2 m2 l1 xl1">

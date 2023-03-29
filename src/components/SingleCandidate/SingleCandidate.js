@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { FaRegEye, FaSortDown } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import Modal from '../Modal/Modal';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 
 
 export const SingleCandidate = () => {
@@ -11,7 +11,7 @@ export const SingleCandidate = () => {
     const [reports, setReports] = useState([]);
     const { id } = useParams();
     const [openModal, setOpenModal] = useState(false);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`http://localhost:3333/api/candidates/?id=${id}`)
@@ -79,7 +79,6 @@ export const SingleCandidate = () => {
             }
 
             <div className="row">
-                <p id="title">Reports <button onClick={()=> navigate('/reports')}>Reports page</button></p>
                 <table className="container responsive-table highlight striped bordered table-container">
                     <thead>
                         <tr className="table-border">

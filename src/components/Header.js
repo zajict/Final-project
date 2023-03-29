@@ -10,7 +10,7 @@ export const Header = () => {
           <span className='flow-text'>Interviews Reports</span>
           <div>
             <button className='blue button' onClick={()=> navigate('/')}>Candidates</button> 
-            <button className='blue button second-btn' onClick={()=> navigate()}>Reports</button> 
+            <button className='blue button second-btn' onClick={()=> navigate('/reports')}>Reports</button> 
           </div>
         </div>
       </nav>
