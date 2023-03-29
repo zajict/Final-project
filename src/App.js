@@ -6,6 +6,7 @@ import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
 import { Route, Routes } from 'react-router';
 import { SingleCandidate } from './components/SingleCandidate/SingleCandidate';
+import { Reports } from './components/Reports/Reports';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path={'/'} element={<MainContent/>}/>
             <Route path={'/candidate/:id'} element={<SingleCandidate />} />
+            <Route path={'/reports'} element={<Reports />} />
           </Routes>
         <Footer />
       </div>
