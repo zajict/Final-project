@@ -10,7 +10,8 @@
 }
 
 main{
-    height: 100vh;
+    height: 150vh;
+    z-index: 5;
 }
 
 @media (max-width: 430px) {

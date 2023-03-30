@@ -21,4 +21,5 @@
 }
 .reports-container{
     height: 150vh;
+    z-index: 3;
 }
