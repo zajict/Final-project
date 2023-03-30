@@ -1,21 +1,29 @@
 .report-data {
-    border: 1px solid #95A5A6;
-    padding: 1%;
+  border: 1px solid #95a5a6;
+  padding: 1%;
 }
 
 .report-info {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .tiny-text {
-    font-size: 0.8rem;
-    color: #95A5A6;
+  font-size: 0.8rem;
+  color: #95a5a6;
 }
 
 .close-icon {
-    margin-left: 10%;
+  margin-left: 10%;
 }
 
-.close-icon:hover, .eye-icon:hover {
-    cursor: pointer;
+.close-icon:hover,
+.eye-icon:hover {
+  cursor: pointer;
+}
+.modalUp {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+}
+#main-wrapper {
+  height: 200vh;
 }

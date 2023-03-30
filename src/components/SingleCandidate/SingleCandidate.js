@@ -6,11 +6,10 @@ import Modal from '../Modal/Modal';
 // import { useNavigate } from 'react-router';
 
 
-export const SingleCandidate = () => {
+export const SingleCandidate = ({openModal, setOpenModal}) => {
     const [candidate, setCandidate] = useState({});
     const [reports, setReports] = useState([]);
     const { id } = useParams();
-    const [openModal, setOpenModal] = useState(false);
     // const navigate = useNavigate();
 
     useEffect(() => {
@@ -105,7 +104,7 @@ export const SingleCandidate = () => {
                                             </tr>
                                         </table>
                                     </td>
-                                    {openModal && <Modal candidate={candidate} report={report} setOpenModal={setOpenModal}/>}
+                                    {openModal && <Modal report={report} setOpenModal={setOpenModal}/>}
                                 </tr>
                             </>
                         ))}
