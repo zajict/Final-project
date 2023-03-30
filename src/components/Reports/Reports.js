@@ -40,21 +40,24 @@ export const Reports = ({openModal, setOpenModal}) => {
         return (`${doiDay}.${doiMonth}.${doiYear}`);
     };      
 
-
     return (
         <div className={`${openModal ? "modalUp" : "modalDown"}`} id='main-wrapper'>
-            <div className={`container`}>
-                <div className="nav-wrapper">
-                    <form>
-                        <div className="input-field">
-                            <input id="search" type="search" placeholder="Search" value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)}/>
-                            <label className="label-icon"><FaSearch className="icon"/></label>
-                            <div className="divider"></div>
-                        </div>
-                    </form>
-                </div>  
+           <div className="row search-wrapper">
+            <div className="col s6 m4 l3 xl3">
+            <form>
+                <div className="input-field">
+                    <i className="material-icons prefix"><FaSearch className="search-icon"/></i>
+                    <input 
+                        type="search" 
+                        placeholder="Search" 
+                        value={searchQuery} 
+                        onChange={(event) => setSearchQuery(event.target.value)}
+                    />
+                </div>
+            </form>
             </div>
-            <div className={`container reports-container`}>
+            </div>
+            <div className="container reports-container">
             {openModal && <Modal report={modalReport} setOpenModal={setOpenModal}/>} 
                 {reports && 
                     reports.map(report => ( 
@@ -63,7 +66,6 @@ export const Reports = ({openModal, setOpenModal}) => {
                                 <div className="truncate report-info">{report.companyName}</div>
                                 <div className="tiny-text">Company</div>
                             </div>
-                            
                             <div className="col s12 m3 l3 xl3">
                                 <div className="truncate report-info">{report.candidateName}</div>
                                 <div className="tiny-text">Candidate</div>
@@ -81,13 +83,9 @@ export const Reports = ({openModal, setOpenModal}) => {
                                     <FaRegEye onClick={()=> {setOpenModal(true); setModalReport(report)}}  /></span>
                                 <span className="close-icon"><FaRegWindowClose onClick={() => deleteHandler(report.id)} /></span>
                             </div>
-                        </div>
-                        
-                    ))
-                    
-                }     
-                
-                 
+                        </div> 
+                    )) 
+                }      
             </div>
         </div>
     )

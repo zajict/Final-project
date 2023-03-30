@@ -16,10 +16,16 @@ function App() {
   const currentPath = location.pathname;
   const [openModal, setOpenModal] = useState(false);
 
+  const headerComponent = {
+    '/reports': <ReportsHeader />,
+    '/create-report': <ReportsHeader />,
+    default: <Header />,
+  };
+
   return (
     <>
       <div className="App">
-        {currentPath === '/reports' || '/create-report' ? <ReportsHeader /> : <Header />}
+        {headerComponent[currentPath] || headerComponent.default}
           <Routes>
             <Route path={'/'} element={<MainContent/>}/>
             <Route path={'/candidate/:id'} element={<SingleCandidate openModal={openModal} setOpenModal={setOpenModal} />} />
