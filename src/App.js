@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <div className="App">
-        {currentPath === '/' ? <Header /> : <ReportsHeader />}
+        {currentPath === '/reports' ? <ReportsHeader /> : <Header />}
           <Routes>
             <Route path={'/'} element={<MainContent/>}/>
             <Route path={'/candidate/:id'} element={<SingleCandidate />} />
