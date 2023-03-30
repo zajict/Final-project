@@ -58,4 +58,5 @@
 
 #single-candidate-content{
   height: 150vh;
+  z-index: 2;
 }
