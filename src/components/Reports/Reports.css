@@ -19,7 +19,3 @@
 .close-icon:hover, .eye-icon:hover {
     cursor: pointer;
 }
-.reports-container{
-    height: 150vh;
-    z-index: 3;
-}
