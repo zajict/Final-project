@@ -9,10 +9,12 @@ import { Route, Routes } from 'react-router';
 import { SingleCandidate } from './components/SingleCandidate/SingleCandidate';
 import { Reports } from './components/Reports/Reports';
 import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
   const location = useLocation();
   const currentPath = location.pathname;
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <>
@@ -20,8 +22,8 @@ function App() {
         {currentPath === '/reports' ? <ReportsHeader /> : <Header />}
           <Routes>
             <Route path={'/'} element={<MainContent/>}/>
-            <Route path={'/candidate/:id'} element={<SingleCandidate />} />
-            <Route path={'/reports'} element={<Reports />} />
+            <Route path={'/candidate/:id'} element={<SingleCandidate openModal={openModal} setOpenModal={setOpenModal} />} />
+            <Route path={'/reports'} element={<Reports openModal={openModal} setOpenModal={setOpenModal} />} />
           </Routes>
         <Footer />
       </div>

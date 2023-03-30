@@ -1,7 +1,6 @@
 import { FaWindowClose } from "react-icons/fa"
 import './Modal.css'
-const Modal = ({candidate, report, setOpenModal}) => {
-
+const Modal = ({report, setOpenModal}) => {
     const doi = report.interviewDate;
     const doiDate = new Date(doi);
     const doiDay = doiDate.getDate().toString().padStart(2, '0');
@@ -14,7 +13,7 @@ const Modal = ({candidate, report, setOpenModal}) => {
             <div className="modalContainer">
                 <div className="row title">
                
-                    <h4>{candidate.name}</h4>
+                    <h4>{report.candidateName}</h4>
                   <div className="closeBtn">
                     <FaWindowClose onClick={()=> {setOpenModal(false)}} id="button"/> 
                   </div>
