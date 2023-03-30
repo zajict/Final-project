@@ -55,3 +55,7 @@
 .openModalBtn:hover {
   cursor: pointer;
 }
+
+#single-page-content{
+  height: 150vh;
+}
