@@ -78,12 +78,12 @@ export const SingleCandidate = ({openModal, setOpenModal}) => {
             }
 
             <div className="row">
-                <table className="container responsive-table highlight striped bordered table-container">
+                <table className="container responsive-table striped bordered table-container">
                     <thead>
                         <tr className="table-border">
                             <th className="table-heading"><FaSortDown /> Company</th>
                             <th className="table-heading"><FaSortDown /> Interview date</th>
-                            <th className="table-heading"><FaSortDown /> Status</th>
+                            <th className="table-heading status"><FaSortDown /> Status</th>
                         </tr>
                     </thead>
 

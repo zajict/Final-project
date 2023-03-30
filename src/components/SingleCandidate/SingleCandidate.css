@@ -39,6 +39,10 @@
   color: white;
 }
 
+.status {
+  width: 270px;
+}
+
 .td {
   padding: 10px 5px;
 }
