@@ -43,7 +43,7 @@ export const SingleCandidate = () => {
     };      
 
     return (
-        <div className={`${openModal ? "modalUp" : "modalDown"}`} id='single-page-content'>  
+        <div className={`${openModal ? "modalUp" : "modalDown"}`} id='single-candidate-content'>  
             {candidate &&
                 <div className={`${openModal ? "modalUp" : "modalDown"}`}>
                     <div className="container info-container">
