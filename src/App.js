@@ -2,7 +2,7 @@
 import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import { Header } from './components/Header';
-import { ReportsHeader } from './components/ReportsHeader/ReportsHeader'
+import { ReportsHeader } from './components/Reports/ReportsHeader'
 import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
 import { Route, Routes } from 'react-router';
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <div className="App">
-        {currentPath === '/reports' ? <ReportsHeader /> : <Header />}
+        {currentPath === '/reports' || '/create-report' ? <ReportsHeader /> : <Header />}
           <Routes>
             <Route path={'/'} element={<MainContent/>}/>
             <Route path={'/candidate/:id'} element={<SingleCandidate />} />
