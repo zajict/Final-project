@@ -66,31 +66,28 @@ export const Reports = () => {
             <div className="container reports-container">
                 {reports && 
                     reports.map(report => (
-                        <>
-                            <div className="row" key={report.id}>
-                                    <div className="col s2 m2 l3 xl3">
-                                        <div>{report.companyName}</div>
-                                        <div>Company name</div>
-                                    </div>
-                                <div className="col s2 m2 l3 xl3">
-                                    <div>{report.candidateName}</div>
-                                    <div>Candidate</div>
-                                </div>
-                            
-                                <div className="col s2 m2 l3 xl3">
-                                    <div>{formatInterviewDate(report.interviewDate)}</div>
-                                    <div>Interview date</div>
-                                </div>
-                                <div className="col s2 m2 l1 xl1">
-                                    <div>{report.status}</div>
-                                    <div>Status</div>
-                                </div>
-                                <div className="col s2 m2 l1 xl1">
-                                    <span><FaRegEye /></span>
-                                    <span className="close-icon"><FaRegWindowClose onClick={() => deleteHandler(report.id)} /></span>
-                                </div>
+                        <div className="row report-data" key={report.id}>
+                            <div className="col s12 m3 l3 xl3">
+                                <div className="truncate report-info">{report.companyName}</div>
+                                <div className="tiny-text">Company</div>
                             </div>
-                        </>
+                            <div className="col s12 m3 l3 xl3">
+                                <div className="truncate report-info">{report.candidateName}</div>
+                                <div className="tiny-text">Candidate</div>
+                            </div>
+                            <div className="col s12 m3 l3 xl3">
+                                <div className="truncate report-info">{formatInterviewDate(report.interviewDate)}</div>
+                                <div className="tiny-text">Interview date</div>
+                            </div>
+                            <div className="col s12 m2 l2 xl2">
+                                <div className="truncate report-info">{report.status}</div>
+                                <div className="tiny-text">Status</div>
+                            </div>
+                            <div className="col s12 m1 l1 xl1 valign-wrapper">
+                                <span className="eye-icon"><FaRegEye /></span>
+                                <span className="close-icon"><FaRegWindowClose onClick={() => deleteHandler(report.id)} /></span>
+                            </div>
+                        </div>
                     ))
                 }               
             </div>
