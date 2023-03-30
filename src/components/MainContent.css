@@ -9,6 +9,10 @@
     justify-content: center;
 }
 
+main{
+    height: 100vh;
+}
+
 @media (max-width: 430px) {
     h5{
     font-size: 18px;
