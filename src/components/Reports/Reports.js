@@ -41,16 +41,6 @@ export const Reports = () => {
 
     return (
         <>
-            <nav>
-                <div className="nav-wrapper">
-                <span>Reports Administration</span>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><button>Reports</button></li>
-                    <li><button>Create Report</button></li>
-                </ul>
-                </div>
-            </nav>
-
             <div className="container">
                 <div className="nav-wrapper">
                     <form>
