@@ -6,17 +6,18 @@
 .search-icon {
   width: 50%;
   height: 50%;
-  color: #2196f3;
+  /* color: #2196f3; */
 }
 
 #main-wrapper {
   height: 100vh;
-  margin-bottom: 0;
 }
 
 .reports-container {
   height: 80vh;
   overflow: auto;
+  scrollbar-width: thin;
+  padding-bottom: 3%;
 }
 
 ::-webkit-scrollbar {

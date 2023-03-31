@@ -6,7 +6,7 @@ export const ReportsHeader = () => {
 
   return (
     <nav>
-      <div className="nav-wrapper blue header">
+      <div className="nav-wrapper blue header reports-header">
         <span className='flow-text'>Reports Administration</span>
         <div>
           <button className='blue button' onClick={()=> navigate('/reports')}>Reports</button> 

@@ -72,30 +72,30 @@ export const Reports = ({openModal, setOpenModal}) => {
                                     <div className="col s12 m3 l3 xl3">
                                         <div className="truncate report-info">{report.companyName}</div>
                                         <div className="tiny-text">Company</div>
+                                    </div>
+                                    <div className="col s12 m3 l3 xl3">
+                                        <div className="truncate report-info">{report.candidateName}</div>
+                                        <div className="tiny-text">Candidate</div>
+                                    </div>
+                                    <div className="col s12 m3 l3 xl3">
+                                        <div className="truncate report-info">{formatInterviewDate(report.interviewDate)}</div>
+                                        <div className="tiny-text">Interview date</div>
+                                    </div>
+                                    <div className="col s12 m2 l2 xl2">
+                                        <div className="truncate report-info">{report.status}</div>
+                                        <div className="tiny-text">Status</div>
+                                    </div>
+                                    <div className="col s12 m1 l1 xl1 valign-wrapper">
+                                        <span className="eye-icon">
+                                        <FaRegEye onClick={()=> {setOpenModal(true); setModalReport(report)}}  />
+                                        </span>
+                                        <span className="close-icon">
+                                        <FaRegWindowClose onClick={() => deleteHandler(report.id)} />
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className="col s12 m3 l3 xl3">
-                                    <div className="truncate report-info">{report.candidateName}</div>
-                                    <div className="tiny-text">Candidate</div>
-                                </div>
-                                <div className="col s12 m3 l3 xl3">
-                                    <div className="truncate report-info">{formatInterviewDate(report.interviewDate)}</div>
-                                    <div className="tiny-text">Interview date</div>
-                                </div>
-                                <div className="col s12 m2 l2 xl2">
-                                    <div className="truncate report-info">{report.status}</div>
-                                    <div className="tiny-text">Status</div>
-                                </div>
-                                <div className="col s12 m1 l1 xl1 valign-wrapper">
-                                    <span className="eye-icon">
-                                    <FaRegEye onClick={()=> {setOpenModal(true); setModalReport(report)}}  />
-                                    </span>
-                                    <span className="close-icon">
-                                    <FaRegWindowClose onClick={() => deleteHandler(report.id)} />
-                                    </span>
-                                </div>
-                            </div>
-                        ))
-                    ) : (
+                            ))
+                        ) : (
                         searchByCandidate.map(report => (
                             <div className="row report-data" key={report.id}>
                                 <div className="col s12 m3 l3 xl3">
