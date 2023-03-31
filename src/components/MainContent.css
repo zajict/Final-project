@@ -2,7 +2,6 @@
     border-radius: 5px;
 }
 #candidate-box{
-    width: 70%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -10,8 +9,24 @@
 }
 
 main{
-    height: 150vh;
+    width: 100%;
+    height: 80vh;
     z-index: 5;
+    margin-top: 50px;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    main{
+        margin-top: 80px;
+    }
+    .search-candidates-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 430px) {
