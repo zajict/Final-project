@@ -60,3 +60,8 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
+.error-message {
+  font-size: 1.1rem;
+  color: #C3272B;
+}
+
