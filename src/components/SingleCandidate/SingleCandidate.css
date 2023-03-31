@@ -9,6 +9,13 @@
   margin-top: 3%;
 }
 
+.candidate-image {
+  padding: 5%;
+  height: auto;
+  width: 50%;
+  height: 50%;
+}
+
 .email-container, .edu-container {
   margin-top: 15%;
   padding-left: 5%;
