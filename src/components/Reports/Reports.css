@@ -30,7 +30,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #BDC3C7;
+  background: #bdc3c7;
   border-radius: 5px;
 }
 
@@ -63,6 +63,5 @@
 
 .error-message {
   font-size: 1.1rem;
-  color: #C3272B;
+  color: #c3272b;
 }
-

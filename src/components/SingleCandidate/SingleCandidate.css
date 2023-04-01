@@ -16,19 +16,21 @@
   height: 50%;
 }
 
-.email-container, .edu-container {
+.email-container,
+.edu-container {
   margin-top: 15%;
   padding-left: 5%;
 }
 
-.name-container, .dob-container {
+.name-container,
+.dob-container {
   padding-left: 5%;
   padding-right: 15%;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #95A5A6;
+  color: #95a5a6;
 }
 
 .info {
@@ -38,7 +40,7 @@
 
 .table-container {
   width: 100%;
-  border: 1px solid #95A5A6;
+  border: 1px solid #95a5a6;
 }
 
 .table-heading {
