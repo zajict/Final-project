@@ -34,6 +34,8 @@ ol {
   height: 100vh;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+=======
   flex-wrap: wrap;
 }
 
@@ -51,4 +53,5 @@ ol {
 .name {
   font-weight: bold;
   opacity: 1;
+>>>>>>> 4ec621409f720ec55313ceb469b85df7dbd1bdec
 }

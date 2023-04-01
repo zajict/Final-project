@@ -1,19 +1,11 @@
-nav {
-  width: 100vw;
-}
 .header {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 31%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  display: flex;
-  justify-content: space-around;
-  font-size: 20px;
-  height: 70px !important;
-  padding-top: 20px;
+    width: 100vw;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 31%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    height: 60px;
 }
 
 .button {
@@ -22,18 +14,26 @@ nav {
   color: white;
   border-color: white;
 }
+.second-btn{
+    margin-left: 5px;
+}
+@media (max-width: 375px) {
+    .header-text{
+        font-size: 14px;
+    }
+    .button{
+        font-size: 12px;
+        height: 25px;
+    }
+}
 .second-btn {
   margin-left: 10px;
 }
 
 @media (max-width: 768px) {
   .header {
-    display: flex;
-    flex-direction: column;
-    min-height: 120px;
-    margin-bottom: 60px;
-    align-items: center;
-    justify-content: center;
+    min-height: 60px;
+    margin-bottom: 30px;
     padding-bottom: 10px;
   }
 }
