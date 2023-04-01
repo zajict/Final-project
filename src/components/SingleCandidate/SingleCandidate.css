@@ -67,3 +67,6 @@
 .openModalBtn:hover {
   cursor: pointer;
 }
+#single-candidate-content{
+  height: 86vh;
+}
