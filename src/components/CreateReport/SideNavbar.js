@@ -1,6 +1,6 @@
 import React from 'react'
 import './CreateReport.css'
-import { Link } from 'react-router-dom'
+
 
 const SideNavbar =( {steps, activeStep}) => {
   return (

@@ -22,3 +22,10 @@ li.steps::marker {
 li {
   padding: 20px;
 }
+
+#wrapper {
+  padding-top: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
