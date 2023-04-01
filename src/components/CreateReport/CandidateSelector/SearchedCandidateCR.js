@@ -12,8 +12,6 @@ const SearchedCandidateCR = ({candidates, setSelectedCandidate, selectedCandidat
         setSelectedCandidate(id)
         setIsToggled(!isToggled)
     }
-    console.log(candidates);
-
     return (
         <div id="wrapper">
             <div className="row">

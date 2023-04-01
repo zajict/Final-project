@@ -10,7 +10,7 @@ export const CreateReport = () => {
     const [activeStep, setActiveStep] = useState(steps[0]);  
 
     return(
-        <div className='container'>
+        <div className='container' id='wrapper'>
             <div className='row'>
                 <div className='col m5 s12 left-side'>
                 <SideNavbar steps={steps} activeStep={activeStep}></SideNavbar>

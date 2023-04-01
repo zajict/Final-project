@@ -14,14 +14,7 @@
 .card-email {
   overflow: hidden;
 }
-#wrapper {
-  margin-left: 5%;
-}
 
 .selected {
   border: 4px solid #2196f3;
-}
-
-#wrapper {
-  height: 78vh;
 }
