@@ -21,6 +21,12 @@ li.steps::marker {
 }
 li {
   padding: 20px;
+  text-align: left;
+}
+ol {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
 #wrapper {
@@ -28,4 +34,24 @@ li {
   height: 100vh;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+  flex-wrap: wrap;
+}
+
+.candidateSelected {
+  border-top: 2px solid black;
+  width: 50%;
+  list-style: none;
+  margin: 0 auto;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.info {
+  text-align: left;
+}
+.name {
+  font-weight: bold;
+  opacity: 1;
+>>>>>>> 4ec621409f720ec55313ceb469b85df7dbd1bdec
 }

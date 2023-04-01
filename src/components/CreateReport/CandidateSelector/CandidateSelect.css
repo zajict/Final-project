@@ -1,19 +1,34 @@
 .longer {
+<<<<<<< HEAD
   height: 80px;
   display: flex !important;
+=======
+  display: flex;
+>>>>>>> 4ec621409f720ec55313ceb469b85df7dbd1bdec
   flex-direction: row;
   justify-content: flex-start;
   margin-right: 10px;
   word-break: break-all;
   white-space: normal;
+<<<<<<< HEAD
   padding: 10px;
 }
 .flex {
   width: 50%;
+=======
+  padding: 20px;
+  height: 100px;
+>>>>>>> 4ec621409f720ec55313ceb469b85df7dbd1bdec
 }
 .card-email {
   overflow: hidden;
 }
+<<<<<<< HEAD
+=======
+#wrapper {
+  margin-left: 5%;
+}
+>>>>>>> 4ec621409f720ec55313ceb469b85df7dbd1bdec
 
 .selected {
   border: 4px solid #2196f3;

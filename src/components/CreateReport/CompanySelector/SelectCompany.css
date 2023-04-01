@@ -1,0 +1,23 @@
+.companies {
+  margin-right: 10px;
+  height: 120px;
+}
+.longer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-right: 10px;
+  word-break: break-all;
+  white-space: normal;
+  padding: 20px;
+  height: 100px;
+}
+
+#back,
+#next {
+  width: 20%;
+  margin-right: 20px;
+}
+#wrapper-company {
+  min-width: 400px;
+}
