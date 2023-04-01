@@ -1,15 +1,11 @@
-nav{
-    width: 100vw;
-}
 .header {
+    width: 100vw;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 31%, rgba(0,212,255,1) 100%);
     display: flex;
     justify-content: space-around;
     font-size: 20px;
-    /* align-items: center; */
-    height: 70px !important;
-    padding-top: 20px;
+    height: 65px !important;
 }
 
 .button {
@@ -19,17 +15,14 @@ nav{
     border-color: white;
 }
 .second-btn{
-    margin-left: 10px;
+    margin-left: 5px;
 }
-
-@media (max-width: 768px) {
-    .header{
-        display: flex;
-        flex-direction: column;
-        min-height: 120px;
-        margin-bottom: 60px;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 10px;
+@media (max-width: 375px) {
+    .header-text{
+        font-size: 14px;
+    }
+    .button{
+        font-size: 12px;
+        height: 25px;
     }
 }
