@@ -2,11 +2,12 @@ footer {
     width: 100vw;
     color: white;
     text-align: center;
-    height: 80px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: -20;
+    bottom: 0;
 }
 .creators{
     margin-left: 5px;
