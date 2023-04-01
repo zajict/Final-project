@@ -9,11 +9,9 @@ const Card = ({candidates}) => {
         <div className='container row' id='candidate'>
             {candidates.map(candidate => (
                 <div className='card col' onClick={() => navigate(`/candidate/${candidate.id}`)}>
-            <div className='card-image'>
                 <img src= {
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5qM2m_aEWRcBU1u-tMav3P6RBYWDIJQMVHx9IIeixwFITKDDyR43ok9TJRtoP2BeyYtk&usqp=CAU"
-                    } alt='candidate'/>
-            </div>
+                        candidate.avatar
+                    } alt='candidate' id='candidate-avatar'/>
             <div className='card-name'> {candidate.name}</div>
             <div className='card-email'> {candidate.email}</div>
                 </div>
