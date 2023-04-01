@@ -19,10 +19,10 @@ export const MainContent = () => {
     return (<div className=''>
         <main className=''>
             <div className="row search-candidates-box">
-                <div className="col m6 s12" id='col-title'>
+                <div className="col s12 m12 l6 xl6" id='col-title'>
                     <h5>Candidates</h5>
                 </div>
-                <div className="col m6 s12" id=' col-search'><Search searchQuery={searchQuery} setSearchQuery={setSearchQuery}/></div>
+                <div className="col s12 m12 l6 xl6" id=' col-search'><Search searchQuery={searchQuery} setSearchQuery={setSearchQuery}/></div>
             </div>
             <div id='candidate-box'>
                 {searchQuery ? (<SearchedCandidates candidates={filteredCandidates} setSearchQuery={setSearchQuery}/>) : (<Card candidates={candidates}/>) }

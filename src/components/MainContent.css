@@ -16,16 +16,16 @@ main{
     margin-top: 50px;
     overflow: auto;
 }
+main::-webkit-scrollbar {
+  display: none;
+}
 
 @media (max-width: 768px) {
     main{
         margin-top: 80px;
     }
     .search-candidates-box{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+       display: flex;
     }
 }
 
@@ -33,6 +33,12 @@ main{
     h5{
     font-size: 18px;
     margin-left: 20px;
+    }
+    .search-candidates-box{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
     }
 }
 @media (max-width: 380px) {
