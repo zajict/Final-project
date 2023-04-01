@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const SelectCompany = () => {
-  return (
-    <div>SelectCompany</div>
-  )
-=======
 import Search from '../../Search/Search'
 import { useNavigate } from 'react-router'
 import './SelectCompany.css'
@@ -38,7 +30,6 @@ const SelectCompany = ({searchQuery,setSearchQuery, filteredCompanies, selectedC
     
         </div>
     )
->>>>>>> 4ec621409f720ec55313ceb469b85df7dbd1bdec
 }
 
 export default SelectCompany
