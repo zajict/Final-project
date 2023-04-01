@@ -1,5 +1,5 @@
 .info-container {
-  margin-top: 3%;
+  padding-top: 3%;
   width: 100%;
 }
 
@@ -7,6 +7,13 @@
   font-size: 2rem;
   margin-left: 8%;
   margin-top: 3%;
+}
+
+.candidate-image {
+  padding: 5%;
+  height: auto;
+  width: 50%;
+  height: 50%;
 }
 
 .email-container,
@@ -41,6 +48,10 @@
   color: white;
 }
 
+.status {
+  width: 270px;
+}
+
 .td {
   padding: 10px 5px;
 }
@@ -55,8 +66,4 @@
 
 .openModalBtn:hover {
   cursor: pointer;
-}
-
-#single-candidate-content {
-  z-index: 2;
 }

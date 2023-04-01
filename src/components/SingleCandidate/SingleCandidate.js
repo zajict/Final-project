@@ -3,14 +3,11 @@ import { useEffect, useState } from 'react';
 import { FaRegEye, FaSortDown } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import Modal from '../Modal/Modal';
-// import { useNavigate } from 'react-router';
-
 
 export const SingleCandidate = ({openModal, setOpenModal}) => {
     const [candidate, setCandidate] = useState({});
     const [reports, setReports] = useState([]);
     const { id } = useParams();
-    // const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`http://localhost:3333/api/candidates/?id=${id}`)
@@ -44,7 +41,7 @@ export const SingleCandidate = ({openModal, setOpenModal}) => {
     return (
         <div className={`${openModal ? "modalUp" : "modalDown"}`} id='single-candidate-content'>  
             {candidate &&
-                <div className={`${openModal ? "modalUp" : "modalDown"}`}>
+                <div>
                     <div className="container info-container">
                         <div className="row">
                             <div className="col s12 m6 l4 xl4 image-container"><img className="responsive-img candidate-image" src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
@@ -77,13 +74,13 @@ export const SingleCandidate = ({openModal, setOpenModal}) => {
                 </div>
             }
 
-            <div className="row">
+            <div className={`${openModal ? "modalUp" : "modalDown"} row`}>
                 <table className="container responsive-table highlight striped bordered table-container">
                     <thead>
                         <tr className="table-border">
-                            <th className="table-heading"><FaSortDown /> Company</th>
-                            <th className="table-heading"><FaSortDown /> Interview date</th>
-                            <th className="table-heading"><FaSortDown /> Status</th>
+                            <th className={`table-heading  ${openModal ? "grey" : "blue"}`}><FaSortDown /> Company</th>
+                            <th className={`table-heading  ${openModal ? "grey" : "blue"}`}><FaSortDown /> Interview date</th>
+                            <th className={`table-heading  ${openModal ? "grey" : "blue"}`}><FaSortDown /> Status</th>
                         </tr>
                     </thead>
 

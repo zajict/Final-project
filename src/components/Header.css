@@ -21,3 +21,15 @@ nav{
 .second-btn{
     margin-left: 10px;
 }
+
+@media (max-width: 768px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        min-height: 120px;
+        margin-bottom: 60px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+}

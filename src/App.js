@@ -2,7 +2,7 @@
 import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import { Header } from './components/Header';
-import { ReportsHeader } from './components/ReportsHeader/ReportsHeader'
+import { ReportsHeader } from './components/Reports/ReportsHeader'
 import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
 import { Route, Routes } from 'react-router';
@@ -16,10 +16,16 @@ function App() {
   const currentPath = location.pathname;
   const [openModal, setOpenModal] = useState(false);
 
+  const headerComponent = {
+    '/reports': <ReportsHeader />,
+    '/create-report': <ReportsHeader />,
+    default: <Header />,
+  };
+
   return (
     <>
       <div className="App">
-        {currentPath === '/reports' ? <ReportsHeader /> : <Header />}
+        {headerComponent[currentPath] || headerComponent.default}
           <Routes>
             <Route path={'/'} element={<MainContent/>}/>
             <Route path={'/candidate/:id'} element={<SingleCandidate openModal={openModal} setOpenModal={setOpenModal} />} />
