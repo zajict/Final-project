@@ -1,0 +1,29 @@
+.steps {
+  font-size: 20px;
+  opacity: 0.8;
+}
+li.steps::marker {
+  font-size: 30px;
+}
+.active {
+  font-size: 30px;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 80vh;
+  border-right: 2px solid black;
+  margin-top: 2%;
+}
+li {
+  padding: 20px;
+}
+
+.selected {
+  border: 5px solid blue;
+}

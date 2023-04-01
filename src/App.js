@@ -10,6 +10,7 @@ import { SingleCandidate } from './components/SingleCandidate/SingleCandidate';
 import { Reports } from './components/Reports/Reports';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { CreateReport } from './components/CreateReport/CreateReport1';
 
 function App() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function App() {
             <Route path={'/'} element={<MainContent/>}/>
             <Route path={'/candidate/:id'} element={<SingleCandidate openModal={openModal} setOpenModal={setOpenModal} />} />
             <Route path={'/reports'} element={<Reports openModal={openModal} setOpenModal={setOpenModal} />} />
+            <Route path={'/create-report/'} element={<CreateReport/>}/>
           </Routes>
         <Footer />
       </div>
