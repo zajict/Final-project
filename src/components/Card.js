@@ -26,4 +26,3 @@ const Card = ({candidates}) => {
 };
 export default Card;
 
-
