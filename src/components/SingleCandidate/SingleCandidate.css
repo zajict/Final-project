@@ -68,5 +68,6 @@
   cursor: pointer;
 }
 #single-candidate-content{
-  height: 86vh;
+  height: 88vh;
+  margin-top: 100px;
 }
