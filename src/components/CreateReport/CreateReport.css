@@ -16,7 +16,6 @@ li.steps::marker {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 80vh;
   border-right: 2px solid black;
   margin-top: 2%;
 }
@@ -24,6 +23,9 @@ li {
   padding: 20px;
 }
 
-.selected {
-  border: 5px solid blue;
+#wrapper {
+  padding-top: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

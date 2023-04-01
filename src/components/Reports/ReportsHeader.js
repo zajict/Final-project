@@ -10,7 +10,7 @@ export const ReportsHeader = () => {
         <span className='flow-text'>Reports Administration</span>
         <div>
           <button className='blue button' onClick={()=> navigate('/reports')}>Reports</button> 
-          <button className='blue button second-btn' onClick={()=> navigate('/create-report')}>Create Report</button> 
+          <button className='blue button second-btn' onClick={()=> navigate('/create-report/step1')}>Create Report</button> 
         </div>
       </div>
     </nav>
