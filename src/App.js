@@ -21,6 +21,7 @@ function App() {
   const headerComponent = {
     '/reports': <ReportsHeader />,
     '/create-report': <ReportsHeader />,
+    '/create-report/:step': <ReportsHeader />,
     default: <Header />,
   };
 

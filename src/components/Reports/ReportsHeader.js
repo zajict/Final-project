@@ -7,7 +7,7 @@ export const ReportsHeader = () => {
   return (
     <nav>
       <div className="nav-wrapper blue header reports-header">
-        <span className='flow-text'>Reports Administration</span>
+        <span className='flow-text header-text'>Reports Administration</span>
         <div>
           <button className='blue button' onClick={()=> navigate('/reports')}>Reports</button> 
           <button className='blue button second-btn' onClick={()=> navigate('/create-report/step1')}>Create Report</button> 

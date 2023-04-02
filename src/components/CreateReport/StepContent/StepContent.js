@@ -3,6 +3,7 @@ import { useNavigate, useOutletContext, useParams } from 'react-router'
 import SearchedCandidateCR from '../CandidateSelector/SearchedCandidateCR';
 import './StepContent.css'
 import SelectCompany from '../CompanySelector/SelectCompany';
+import { ReportDetails } from '../ReportDetails/ReportDetails';
 
 const StepContent = () => {
     const [candidates, setCandidates] = useState([]);
@@ -26,7 +27,7 @@ const StepContent = () => {
     <div className='container'>
     {step === 'step1' && <SearchedCandidateCR candidates={filteredCandidates} setSelectedCandidate={setSelectedCandidate} selectedCandidate={selectedCandidate} setSearchQuery= {setSearchQuery} searchQuery={searchQuery}/>}
     {step === 'step2' && <SelectCompany setSearchQuery= {setSearchQuery} searchQuery={searchQuery} filteredCompanies={filteredCompanies} setSelectedCompany={setSelectedCompany} selectedCompany={selectedCompany}/> }
-    {step === 'step3' && <h1>Step3</h1>}
+    {step === 'step3' && <ReportDetails selectedCandidate={selectedCandidate} selectedCompany={selectedCompany}/>}
     </div>
     
   )
