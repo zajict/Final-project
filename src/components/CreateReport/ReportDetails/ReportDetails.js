@@ -1,14 +1,13 @@
 import './ReportDetails.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { FaSortDown } from 'react-icons/fa';
+// import { FaSortDown } from 'react-icons/fa';
 
 export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
-    console.log(selectedCandidate, selectedCompany);
     const navigate = useNavigate();
-    const [interviewDate, setInterviewDate] = useState();
-    const [phase, setPhase] = useState();
-    const [status, setStatus] = useState();
+    const [interviewDate, setInterviewDate] = useState("");
+    const [phase, setPhase] = useState("");
+    const [status, setStatus] = useState("");
     const [note, setNote] = useState("");
 
     const createReportHandler = () => {
@@ -19,8 +18,8 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
             },
             body: JSON.stringify({
                 id: Math.floor(Math.random() * 100),
-                candidateName: selectedCandidate.candidateName,
-                companyName: selectedCompany.companyName,
+                candidateName: selectedCandidate,
+                companyName: selectedCompany,
                 interviewDate,
                 phase,
                 status,
@@ -33,8 +32,8 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
                 console.log('Error');
                 return;
             }
-        })
-        navigate('/reports');
+            navigate('/reports');
+        }) 
     }
 
     return (
@@ -52,18 +51,19 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
                     <div className="col s12 m4 l4 xl4 phase-container">
                         <label>Phase:</label>
                         <select value={phase} onChange={e => setPhase(e.target.value)}>
-                            <option value="option1">CV</option>
-                            <option value="option2">HR</option>
-                            <option value="option3">Technical</option>
-                            <option value="option3">Final</option>
+                            <option value="">Select</option>
+                            <option value="CV">CV</option>
+                            <option value="HR">HR</option>
+                            <option value="Technical">Technical</option>
+                            <option value="Final">Final</option>
                         </select>
                     </div>
                     <div className="col s12 m4 l4 xl4 status-container">
                         <label>Status:</label>
                         <select value={status} onChange={e => setStatus(e.target.value)}>
                             <option value="">Select</option>
-                            <option value="option1">Passed</option>
-                            <option value="option2">Declined</option>
+                            <option value="Passed">Passed</option>
+                            <option value="Declined">Declined</option>
                         </select>
                     </div>
                 </div>
@@ -77,10 +77,9 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
 
                 <div className="container buttons-container">
                     <button className='waves-effect waves-light red btn' id='back' onClick={() => {navigate('/create-report/step2')}}>BACK</button>
-                    <button className='waves-effect waves-light blue btn' id='submit' disabled={!interviewDate || !phase || !status || !note} onClick={() => createReportHandler()}>SUBMIT</button>
+                    <button className='waves-effect waves-light blue btn' id='submit' disabled={!interviewDate || !phase || !status || !note} onClick={createReportHandler}>SUBMIT</button>
                 </div>
             </div>
         </>
     )
 }
-

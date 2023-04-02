@@ -16,7 +16,7 @@ const SelectCompany = ({searchQuery,setSearchQuery, filteredCompanies, selectedC
             <div className={`card col m4 s12 companies`} onClick={(e)=> {
                 handleCompanyClick(company.name)
                 e.currentTarget.classList.toggle('selected')
-            }}>
+            }} key={company.id}>
                 <h4>{company.name}</h4>
                 </div>
                 
