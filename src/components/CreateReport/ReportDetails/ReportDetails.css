@@ -10,3 +10,8 @@
 select {
     display: block;
 }
+
+#back,
+#submit {
+    width: auto;
+}

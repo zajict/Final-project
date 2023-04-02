@@ -18,7 +18,7 @@ const StepContent = () => {
         fetch('http://localhost:3333/api/companies').then((response) => response.json()).then(data => {
             setCompanies(data)
     })
-    })
+    }, [])
     const filteredCandidates = candidates.filter((candidate)=> candidate.name.toLowerCase().includes(searchQuery.toLocaleLowerCase())); 
     const filteredCompanies = companies.filter((company)=> company.name.toLowerCase().includes(searchQuery.toLocaleLowerCase())); 
     const {step} = useParams();
