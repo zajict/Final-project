@@ -47,7 +47,7 @@ const Modal = ({report, setOpenModal}) => {
                         </h6>
                         <div className="text-container">
                         <p className="text" id="text-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan sodales turpis sed maximus. Aenean bibendum arcu in enim lacinia posuere. Aliquam sodales, massa ut luctus pulvinar, odio leo pretium nisl, vitae pharetra nisi urna nec tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras tristique pellentesque est, in hendrerit dolor finibus a. Sed consequat pulvinar lectus ut feugiat. Curabitur vel erat vel dui convallis volutpat.
+                        {report.note}
                         </p>
                         </div>
                         

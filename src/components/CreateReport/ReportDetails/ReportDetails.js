@@ -28,10 +28,6 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
         })
         .then((response) => response.json())
         .then(res => {
-            if (res.status !== 200) {
-                console.log('Error');
-                return;
-            }
             navigate('/reports');
         }) 
     }
