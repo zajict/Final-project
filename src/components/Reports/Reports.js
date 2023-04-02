@@ -40,8 +40,12 @@ export const Reports = ({openModal, setOpenModal}) => {
         return (`${doiDay}.${doiMonth}.${doiYear}`);
     };   
     
-    const searchByCompany = reports.filter(report => report.companyName.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
-    const searchByCandidate = reports.filter(report => report.candidateName.toLowerCase().includes(searchQuery.toLowerCase()));
+        const searchByCompany = reports.filter((report) => report.companyName.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
+
+        
+        const searchByCandidate = reports.filter((report) => report.candidateName.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    
 
     return (
         <div className={`${openModal ? "modalUp" : "modalDown"}`} id='main-wrapper'>
