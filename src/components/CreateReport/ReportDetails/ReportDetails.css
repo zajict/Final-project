@@ -1,0 +1,12 @@
+.details-container {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.buttons-container {
+    width: 100%;
+}
+
+select {
+    display: block;
+}

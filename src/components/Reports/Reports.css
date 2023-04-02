@@ -65,9 +65,3 @@
   font-size: 1.1rem;
   color: #c3272b;
 }
-@media (max-width: 768px) {
-  #main-wrapper{
-    margin-top: 60px;
-    height: 100vh;
-  }
-}
