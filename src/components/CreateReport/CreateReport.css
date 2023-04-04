@@ -62,6 +62,9 @@ ol {
   opacity: 1;
   font-weight: bold;
 }
+#wrapper2-row{
+  min-width: 100%;
+}
 @media screen and (max-width: 842px) {
   .steps {
     font-size: 15px;
