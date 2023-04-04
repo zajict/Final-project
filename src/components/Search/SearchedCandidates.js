@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-
+import '../Card.css'
 const SearchedCandidates = ({candidates, setSearchQuery}) => {
     const navigate = useNavigate();
 
@@ -9,19 +9,15 @@ const SearchedCandidates = ({candidates, setSearchQuery}) => {
     }
 
     return (
-        <div className="container" id="searchWrapper"
-        ><div className="row">
+        <div className="">
+        <div className="row" id="candidate">
         {candidates.map(candidate => (
-            <div className="col m4 s6">
-            <div className='card ' onClick={()=> handleCandidateClick(candidate.id)}>
-            <div className='card-image changedWidth'>
+            <div className="card col s6" onClick={()=> handleCandidateClick(candidate.id)}>
                 <img src= {
                         candidate.avatar
-                    } alt='candidate'/>
-            </div>
+                    } alt='candidate' id="candidate-avatar"/>
             <div className='card-name'> {candidate.name}</div>
             <div className='card-email'> {candidate.email}</div>
-        </div>
         </div>
         ))}
         </div>

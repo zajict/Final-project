@@ -1,11 +1,15 @@
 .header {
-    width: 100vw;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 31%, rgba(0,212,255,1) 100%);
-    display: flex;
-    justify-content: space-around;
-    font-size: 20px;
-    height: 60px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 31%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  height: 60px;
 }
 
 .button {
@@ -14,17 +18,17 @@
   color: white;
   border-color: white;
 }
-.second-btn{
-    margin-left: 5px;
+.second-btn {
+  margin-left: 5px;
 }
 @media (max-width: 375px) {
-    .header-text{
-        font-size: 14px;
-    }
-    .button{
-        font-size: 12px;
-        height: 25px;
-    }
+  .header-text {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 12px;
+    height: 25px;
+  }
 }
 .second-btn {
   margin-left: 10px;

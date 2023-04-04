@@ -14,9 +14,9 @@ const SearchedCandidateCR = ({candidates, setSelectedCandidate, selectedCandidat
         <div id="wrapper">
             <div className="row">
             <Search setSearchQuery={setSearchQuery} searchQuery={searchQuery}/>
-            {candidates.map(candidate => (
+            {candidates.map((candidate, i) => (
             <div className={`col m6 s12 flex`} key={candidate.id}>
-                <div className={`card longer` } onClick={(e)=>{
+                <div className={`card longer1` } onClick={(e)=>{
                 e.currentTarget.classList.toggle('selected')
                 handleCandidateClick(candidate.name)}
             }>

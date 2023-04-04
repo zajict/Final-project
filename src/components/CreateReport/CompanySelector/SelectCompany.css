@@ -1,6 +1,6 @@
 .companies {
-  margin-right: 10px;
   height: 120px;
+  margin-right: 20px;
 }
 .longer {
   display: flex;
@@ -9,7 +9,7 @@
   margin-right: 10px;
   word-break: break-all;
   white-space: normal;
-  padding: 20px;
+  padding: 30px;
   height: 100px;
 }
 
