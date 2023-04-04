@@ -15,3 +15,14 @@ select {
 #submit {
     width: auto;
 }
+
+#date,
+option {
+    font-size: 0.9em;
+    padding: 1px;
+}
+
+.invalid-input {
+    color: #CF3A24;
+    font-size: 0.9em;
+}

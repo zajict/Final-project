@@ -4,7 +4,7 @@
 }
 
 #title {
-  font-size: 2rem;
+  font-size: 2em;
   margin-left: 8%;
   margin-top: 3%;
 }
@@ -29,12 +29,12 @@
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.1eem;
   color: #95a5a6;
 }
 
 .info {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   text-indent: 1.5em;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .table-heading {
-  background-color: #22a7f0;
+  background-color: #19B5FE;
   color: white;
 }
 

@@ -9,6 +9,7 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
     const [phase, setPhase] = useState("");
     const [status, setStatus] = useState("");
     const [note, setNote] = useState("");
+    const [validDate, setValidDate] = useState(true);
 
     const createReportHandler = () => {
         fetch("http://localhost:3333/api/reports", {
@@ -30,7 +31,18 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
         .then(res => {
             navigate('/reports');
         }) 
-    }
+    };
+
+    const handleDateChange = (event) => {
+        const selectedDate = new Date(event.target.value);
+        const currentDate = new Date();
+        if (selectedDate > currentDate) {
+            setValidDate(false);
+        } else {
+            setValidDate(true);
+            setInterviewDate(event.target.value);
+        }
+    };
 
     return (
         <>
@@ -40,14 +52,18 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
                         <label>Interview Date:</label>
                         <input
                             type="date"
+                            id="date"
                             value={interviewDate}
-                            onChange={e => setInterviewDate(e.target.value)}
+                            onChange={handleDateChange}
                         />
+                        {!validDate && (
+                            <p className="invalid-input">Date cannot be in the future</p>
+                        )}
                     </div>
                     <div className="col s12 m4 l4 xl4 phase-container">
                         <label>Phase:</label>
                         <select value={phase} onChange={e => setPhase(e.target.value)}>
-                            <option value="">Select</option>
+                            <option value="" disabled>Select</option>
                             <option value="CV">CV</option>
                             <option value="HR">HR</option>
                             <option value="Technical">Technical</option>
@@ -57,7 +73,7 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
                     <div className="col s12 m4 l4 xl4 status-container">
                         <label>Status:</label>
                         <select value={status} onChange={e => setStatus(e.target.value)}>
-                            <option value="">Select</option>
+                            <option value="" disabled>Select</option>
                             <option value="Passed">Passed</option>
                             <option value="Declined">Declined</option>
                         </select>
