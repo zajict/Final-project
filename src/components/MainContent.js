@@ -4,7 +4,6 @@ import Search from './Search/Search';
 import SearchedCandidates from './Search/SearchedCandidates';
 import Card from './Card';
 
-
 export const MainContent = () => {
     
     const [searchQuery,setSearchQuery] = useState("");
@@ -16,7 +15,7 @@ export const MainContent = () => {
 
     const filteredCandidates = candidates.filter((candidates)=> candidates.name.toLowerCase().includes(searchQuery.toLocaleLowerCase()));
     
-    return (<div className=''>
+    return (<div className='container'>
         <main className=''>
             <div className="row search-candidates-box">
                 <div className="col s12 m12 l6 xl6" id='col-title'>
@@ -24,7 +23,7 @@ export const MainContent = () => {
                 </div>
                 <div className="col s12 m12 l6 xl6" id=' col-search'><Search searchQuery={searchQuery} setSearchQuery={setSearchQuery}/></div>
             </div>
-            <div id='candidate-box'>
+            <div id='candidate-box' className='container'>
                 {searchQuery ? (<SearchedCandidates candidates={filteredCandidates} setSearchQuery={setSearchQuery}/>) : (<Card candidates={candidates}/>) }
             </div>
         </main>

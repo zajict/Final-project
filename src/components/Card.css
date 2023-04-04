@@ -1,19 +1,19 @@
 .card {
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.card img{
-   object-fit: contain;
+.card img {
+  object-fit: contain;
 }
-#candidate{
-    margin-bottom: 30px;
+#candidate {
+  margin-bottom: 30px;
 }
-#candidate-avatar{
-    width: 50%;
+#candidate-avatar {
+  width: 50%;
+  padding: 10px;
 }
-
