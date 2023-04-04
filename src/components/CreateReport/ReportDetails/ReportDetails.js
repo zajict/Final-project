@@ -1,7 +1,6 @@
 import './ReportDetails.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-// import { FaSortDown } from 'react-icons/fa';
 
 export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
     const navigate = useNavigate();
