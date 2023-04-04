@@ -8,6 +8,7 @@ export const SingleCandidate = ({openModal, setOpenModal}) => {
     const [candidate, setCandidate] = useState({});
     const [reports, setReports] = useState([]);
     const { id } = useParams();
+    const [modalReport, setModalReport] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:3333/api/candidates/?id=${id}`)
@@ -95,13 +96,13 @@ export const SingleCandidate = ({openModal, setOpenModal}) => {
                                             <tr>
                                                 <td>{report.status}</td>
                                                 <td><FaRegEye className="openModalBtn eye-icon" onClick={()=> {
-                                                    setOpenModal(true);
+                                                    setOpenModal(true); setModalReport(report);
                                                     }}/>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
-                                    {openModal && <Modal report={report} setOpenModal={setOpenModal}/>}
+                                    {openModal && <Modal report={modalReport} setOpenModal={setOpenModal}/>}
                                 </tr>
                             </>
                         ))}
