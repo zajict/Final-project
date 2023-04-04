@@ -2,6 +2,7 @@
   padding: 10px;
 }
 .longer1 {
+  min-width: 176px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -18,7 +19,9 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
-
+#next{
+  min-width: 70px;
+}
 .selected {
   border: 4px solid #2196f3;
 }

@@ -12,7 +12,7 @@ export const CreateReport = () => {
     const [selectedCompany, setSelectedCompany] = useState(null);
     return(
         <div id='wrapper2'>
-            <div className='row'>
+            <div className='row' id='wrapper2-row'>
                 <div className='col m4 s12 left-side'>
                 <SideNavbar steps={steps} activeStep={activeStep} selectedCandidate={selectedCandidate} selectedCompany={selectedCompany}></SideNavbar>
                 </div>
