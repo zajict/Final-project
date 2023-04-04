@@ -44,7 +44,7 @@ export const SingleCandidate = ({openModal, setOpenModal}) => {
                 <div>
                     <div className="container info-container">
                         <div className="row">
-                            <div className="col s12 m6 l4 xl4 image-container"><img className="responsive-img candidate-image" src={candidate.avatar} style={{width :"80%"}} alt="candidate-img"/></div>
+                            <div className="col s12 m6 l4 xl4 image-container"><img className="responsive-img candidate-image" src={candidate.avatar} style={{width :"80%"}} alt="candidate-img" title={candidate.name}/></div>
                             <div className="col s12 m6 l4 xl4 specs-container">
                                 <div className="row">
                                     <div className="name-container">

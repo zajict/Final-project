@@ -50,7 +50,7 @@ export const Reports = ({openModal, setOpenModal}) => {
     return (
         <div className={`${openModal ? "modalUp" : "modalDown"}`} id='main-wrapper'>
             <div className="row search-wrapper">
-                <div className="col s6 m4 l3 xl3">
+                <div className="col s8 m4 l3 xl3">
                     <form>
                         <div className="input-field">
                             <i className="material-icons prefix"><FaSearch className="search-icon"/></i>
