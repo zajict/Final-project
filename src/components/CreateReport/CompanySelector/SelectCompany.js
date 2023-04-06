@@ -2,7 +2,7 @@ import Search from '../../Search/Search'
 import { useNavigate } from 'react-router'
 import './SelectCompany.css'
 
-const SelectCompany = ({searchQuery,setSearchQuery, filteredCompanies, selectedCompany, setSelectedCompany}) => {
+const SelectCompany = ({searchQuery,setSearchQuery, filteredCompanies, selectedCompany, setSelectedCompany,  setActiveStep}) => {
     const navigate = useNavigate();
 
     const handleCompanyClick = (companyName) => {
@@ -23,8 +23,12 @@ const SelectCompany = ({searchQuery,setSearchQuery, filteredCompanies, selectedC
         ))}
         </div>
         <div className='row'>
-            <button className='waves-effect waves-light red btn' id='back' onClick={() =>{navigate('/create-report/step1')} }>BACK</button>
-            <button className='waves-effect waves-light blue btn' id='next' disabled={selectedCompany === null} onClick={() =>{navigate('/create-report/step3')} }>NEXT</button>
+            <button className='waves-effect waves-light red btn' id='back' onClick={() =>{
+                setActiveStep('Select Candidate')
+                navigate('/create-report/step1')} }>BACK</button>
+            <button className='waves-effect waves-light blue btn' id='next' disabled={selectedCompany === null} onClick={() =>{
+                setActiveStep('Fill report details')
+                navigate('/create-report/step3')} }>NEXT</button>
         </div>
         
     

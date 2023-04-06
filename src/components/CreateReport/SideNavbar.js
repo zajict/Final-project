@@ -1,4 +1,3 @@
-import React from 'react'
 import './CreateReport.css'
 import { useParams } from 'react-router';
 
