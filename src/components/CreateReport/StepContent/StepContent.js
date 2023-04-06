@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useOutletContext, useParams } from 'react-router'
 import SearchedCandidateCR from '../CandidateSelector/SearchedCandidateCR';
-import './StepContent.css'
 import SelectCompany from '../CompanySelector/SelectCompany';
 import { ReportDetails } from '../ReportDetails/ReportDetails';
 

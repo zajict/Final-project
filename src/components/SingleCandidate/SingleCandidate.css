@@ -67,10 +67,18 @@
 .openModalBtn:hover {
   cursor: pointer;
 }
+
 .modalUp > table > tbody > .table-border {
   background: rgb(85, 85, 85);
 }
+
 #margin-bottom {
   margin-bottom: 0;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 410px) {
+  .info {
+    font-size: 1.2em;
+  }
 }
