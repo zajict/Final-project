@@ -4,7 +4,7 @@ import Search from "../../Search/Search";
 
 
 
-const SearchedCandidateCR = ({candidates, setSelectedCandidate, selectedCandidate, searchQuery, setSearchQuery}) => {
+const SearchedCandidateCR = ({candidates, setSelectedCandidate, selectedCandidate, searchQuery, setSearchQuery, setActiveStep}) => {
     const navigate = useNavigate()
     const handleCandidateClick = (candidateName) => {
         setSelectedCandidate(candidateName)
@@ -30,7 +30,9 @@ const SearchedCandidateCR = ({candidates, setSelectedCandidate, selectedCandidat
             </div>
         ))}
         </div>
-        <button className='waves-effect waves-light blue btn' id='next' disabled={selectedCandidate === null} onClick={() =>{navigate('/create-report/step2')} }>NEXT</button>
+        <button className='waves-effect waves-light blue btn' id='next' disabled={selectedCandidate === null} onClick={() =>{
+            setActiveStep('Select Company')
+            navigate('/create-report/step2')} }>NEXT</button>
         </div>
     );
 };

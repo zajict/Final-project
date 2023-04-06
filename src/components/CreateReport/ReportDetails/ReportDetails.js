@@ -2,7 +2,7 @@ import './ReportDetails.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
-export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
+export const ReportDetails = ({selectedCandidate, selectedCompany, setActiveStep}) => {
     const navigate = useNavigate();
     const [interviewDate, setInterviewDate] = useState("");
     const [phase, setPhase] = useState("");
@@ -87,7 +87,9 @@ export const ReportDetails = ({selectedCandidate, selectedCompany}) => {
                 </div>
 
                 <div className="container buttons-container">
-                    <button className='waves-effect waves-light red btn' id='back' onClick={() => {navigate('/create-report/step2')}}>BACK</button>
+                    <button className='waves-effect waves-light red btn' id='back' onClick={() => {
+                        setActiveStep('Select Company')
+                        navigate('/create-report/step2')}}>BACK</button>
                     <button className='waves-effect waves-light blue btn' id='submit' disabled={!interviewDate || !phase || !status || !note} onClick={createReportHandler}>SUBMIT</button>
                 </div>
             </div>

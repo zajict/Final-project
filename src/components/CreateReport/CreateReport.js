@@ -18,7 +18,7 @@ export const CreateReport = () => {
                 </div>
                 <div className='col m8 s12'>
                         <div className='row'>
-                        <Outlet context={[selectedCandidate,setSelectedCandidate, selectedCompany, setSelectedCompany]}/>
+                        <Outlet context={[selectedCandidate,setSelectedCandidate, selectedCompany, setSelectedCompany, setActiveStep]}/>
                             </div>
                     </div>
                 </div>
