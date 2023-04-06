@@ -44,7 +44,7 @@
 }
 
 .table-heading {
-  background-color: #19B5FE;
+  background-color: #19b5fe;
   color: white;
 }
 
@@ -68,5 +68,9 @@
   cursor: pointer;
 }
 .modalUp > table > tbody > .table-border {
-    background : rgb(85, 85, 85);
+  background: rgb(85, 85, 85);
+}
+#margin-bottom {
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
