@@ -75,7 +75,7 @@ export const SingleCandidate = ({openModal, setOpenModal}) => {
                 </div>
             }
 
-            <div className={`${openModal ? "modalUp" : "modalDown"} row`}>
+            <div className={`row`} id='margin-bottom'>
                 <table className="container responsive-table highlight striped bordered table-container">
                     <thead>
                         <tr className="table-border">
