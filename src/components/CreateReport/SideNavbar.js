@@ -14,8 +14,9 @@ const SideNavbar =( {steps, activeStep, selectedCompany, selectedCandidate}) => 
     </ol>
     {(step === 'step2' && 
     <div className='candidateSelected'>
-    <span className='info'>{`Candidate:
-    ${selectedCandidate}`}</span>
+    <span className='info'>Candidate:</span>
+    <br></br>
+    <span className='nameInfo'>{`${selectedCandidate}`}</span>
     
     </div>) || (step === 'step3' && <div className='candidateSelected'>
     <span className='info'>Candidate:</span>
